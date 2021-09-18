@@ -14,7 +14,12 @@ public class Proxy implements DataOperation {
     public Proxy(DataOperation dataOperation, DataRetrievalImpl dataRetrieval) {
         this.dataOperation = dataOperation;
         this.dri = dataRetrieval;
-        list = dri.getData();
+        dataOperation.receivingData(dri.getData());
+    }
+
+    @Override
+    public void receivingData(List<Integer> list) {
+        this.list = list;
     }
 
     @Override

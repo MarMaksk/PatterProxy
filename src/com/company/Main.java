@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         Proxy doi = new Proxy(new DataOperationImpl(), new DataRetrievalImpl());
         doi.show();
         System.out.println(doi.getSum());

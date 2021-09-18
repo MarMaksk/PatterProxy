@@ -21,9 +21,11 @@ public class DataRetrievalImpl implements DataRetrieval {
             }
         }
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String str = "";
-            while ((str = br.readLine()) != null)
-                list.add(br.read());
+            String str = br.readLine();
+            String[] strings = str.split(" ");
+            for (String string : strings) {
+                list.add(Integer.parseInt(string));
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
