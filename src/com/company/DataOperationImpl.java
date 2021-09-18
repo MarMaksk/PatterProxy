@@ -10,7 +10,7 @@ import java.util.List;
 public class DataOperationImpl implements DataOperation {
     private List<Integer> list;
 
-    public DataOperationImpl(List<Integer> list) {
+    public void receivingData(List<Integer> list) {
         this.list = list;
     }
 

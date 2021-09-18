@@ -9,9 +9,17 @@ import java.util.List;
 public class DataRetrievalImpl implements DataRetrieval {
     private File file = new File("data.txt");
 
+
     @Override
     public List<Integer> getData() {
         List<Integer> list = new ArrayList<>();
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String str = "";
             while ((str = br.readLine()) != null)

@@ -1,12 +1,13 @@
 package com.company;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
 
-    public static void main(String[] args) {
-        DataOperationImpl doi = new DataOperationImpl(Arrays.asList(1, 2, 5, 4, 2, 9, 4));
+    public static void main(String[] args) throws FileNotFoundException {
+        Proxy doi = new Proxy(new DataOperationImpl(), new DataRetrievalImpl());
         doi.show();
         System.out.println(doi.getSum());
         System.out.println(doi.getMax());
