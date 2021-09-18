@@ -11,5 +11,5 @@ public interface DataOperation {
 
     void show();
 
-    int forcedUpdate();
+    boolean forcedUpdate();
 }
