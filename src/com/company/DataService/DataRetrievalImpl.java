@@ -1,4 +1,4 @@
-package com.company;
+package com.company.DataService;
 
 import com.company.DataInterface.DataRetrieval;
 

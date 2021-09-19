@@ -1,25 +1,26 @@
-package com.company;
+package com.company.Proxy;
 
 import com.company.DataInterface.DataOperation;
 import com.company.DataInterface.DataRetrieval;
+import com.company.DataService.DataRetrievalImpl;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Proxy implements DataOperation {
     private DataOperation dataOperation;
     private DataRetrieval dri;
-    private List<Integer> list;
     private Logger logger = Logger.getInstance();
 
     public Proxy(DataOperation dataOperation, DataRetrievalImpl dataRetrieval) {
         this.dataOperation = dataOperation;
         this.dri = dataRetrieval;
-        dataOperation.receivingData(dri.getData());
+        dataOperation.receivingDataByUser(dri.getData());
     }
 
-    @Override
-    public void receivingData(List<Integer> list) {
-        this.list = list;
+    public void receivingDataByUser(List<Integer> list) {
+        logger.log("receiving data by user");
+        dataOperation.receivingDataByUser(list);
     }
 
     @Override

@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface DataOperation {
 
-    void receivingData(List<Integer> list);
+    void receivingDataByUser(List<Integer> list);
 
     int getSum();
 

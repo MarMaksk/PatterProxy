@@ -1,6 +1,10 @@
 package com.company;
 
 
+import com.company.DataService.DataOperationImpl;
+import com.company.DataService.DataRetrievalImpl;
+import com.company.Proxy.Proxy;
+
 public class Main {
 
     public static void main(String[] args) {

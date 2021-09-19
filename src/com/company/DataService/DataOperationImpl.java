@@ -1,4 +1,4 @@
-package com.company;
+package com.company.DataService;
 
 import com.company.DataInterface.DataOperation;
 
@@ -10,9 +10,10 @@ import java.util.List;
 public class DataOperationImpl implements DataOperation {
     private List<Integer> list;
 
-    public void receivingData(List<Integer> list) {
+    public void receivingDataByUser(List<Integer> list) {
         this.list = list;
     }
+
 
     @Override
     public int getSum() {
