@@ -1,8 +1,5 @@
 package com.company;
 
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main {
 
@@ -13,5 +10,6 @@ public class Main {
         System.out.println(doi.getMax());
         System.out.println(doi.getMin());
         System.out.println(doi.getAverage());
+        System.out.println(doi.forcedUpdate());
     }
 }

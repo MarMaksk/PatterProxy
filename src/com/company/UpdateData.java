@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class UpdateDataImpl {
+public class UpdateData {
 
     private static File file = new File("data.txt");
 
@@ -23,7 +23,7 @@ public class UpdateDataImpl {
         int count = (int) ((Math.random() * MAX_COUNT) + 2);
         String setOfNumbers = "";
         for (int i = 0; i < count; i++) {
-            setOfNumbers += Math.random() * MAX_NUMBERS + " ";
+            setOfNumbers += (int) (Math.random() * MAX_NUMBERS) + " ";
         }
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
             bw.write(setOfNumbers);

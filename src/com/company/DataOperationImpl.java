@@ -42,6 +42,6 @@ public class DataOperationImpl implements DataOperation {
 
     @Override
     public boolean forcedUpdate() {
-        return new UpdateDataImpl().dataUpdate();
+        return new UpdateData().dataUpdate();
     }
 }
