@@ -1,21 +1,18 @@
 package com.company;
 
-import com.company.DataInterface.UpdateData;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class UpdateDataImpl implements UpdateData {
+public class UpdateDataImpl {
 
-    private File file = new File("data.txt");
+    private static File file = new File("data.txt");
 
-    private final int MAX_COUNT = 15;
-    private final int MAX_NUMBERS = 100;
+    private static final int MAX_COUNT = 15;
+    private static final int MAX_NUMBERS = 100;
 
-    @Override
-    public boolean dataUpdate() {
+    public static boolean dataUpdate() {
         if (!file.exists()) {
             try {
                 file.createNewFile();
